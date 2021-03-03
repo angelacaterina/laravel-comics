@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1>All posts for the admin</h1>
+    <h1>All comics for the admin</h1>
     <table class="table">
         <thead>
             <tr>
@@ -12,29 +12,29 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($posts as $value)
+            @foreach($comics as $value)
             <tr>
                 <td>{{$value->id}}</td>
                 <td>{{$value->title}}</td>
                 <td>{{$value->slug}}</td>
                 <td>
-                    <a href="{{ route('admin.posts.show', ['post'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
-                    <a href="{{ route('admin.posts.edit', ['post'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
-                    <!-- MODO 1: Eliminazione istantanea del Post -->
-                    <form action="{{ route('admin.posts.destroy', ['post'=> $value->id]) }}" method="post">
+                    <a href="{{ route('admin.comics.show', ['post'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
+                    <a href="{{ route('admin.comics.edit', ['post'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
+                    <!-- MODO 1: Eliminazione istantanea del Comics -->
+                    <form action="{{ route('admin.comics.destroy', ['post'=> $value->id]) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt fa-xs fa-fw"></i></button>
                     </form>
 
-                    <!-- MODO 2: Eliminazine con conferma del Post -->
+                    <!-- MODO 2: Eliminazine con conferma del Comics -->
                     <!-- Button trigger modal -->
                     {{-- <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#destroy-{{$value->id}}">
                         <i class="fas fa-trash-alt fa-xs fa-fw"></i>
                     </button> --}}
                     
                     <!-- Modal -->
-                    {{-- <div class="modal fade" id="destroy-{{$value->id}}" tabindex="-1" role="dialog" aria-labelledby="post-destroy-{{$value->id}}" aria-hidden="true">
+                    {{-- <div class="modal fade" id="destroy-{{$value->id}}" tabindex="-1" role="dialog" aria-labelledby="comics-destroy-{{$value->id}}" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <form action="{{ route('admin.posts.destroy', ['post'=> $value->id]) }}" method="post">
+                                    <form action="{{ route('admin.comics.destroy', ['comics'=> $value->id]) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
