@@ -1,0 +1,21 @@
+header#site_header {
+    nav.nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: dimgrey;
+        padding: 0 20px;
+        div.link_nav{
+            a{
+                font-size: 16px;
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+                &.active,
+                &:hover{
+                color: #0282FA;       
+                }
+            }
+        }
+    }
+}

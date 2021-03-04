@@ -28,7 +28,7 @@
         {{-- description --}}
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="3"> {{ old('description')}}</textarea>
+            <textarea class="form-control" name="description" id="description" rows="10"> {{ old('description')}}</textarea>
         </div>
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -47,7 +47,10 @@
         {{-- Available --}}
         <div class="form-group">
             <label for="available">Available</label>
-            <input class="form-control" type="text" name="available" id="available" value="{{ old('available')}}">
+            <select class="form-control" name="available" id="available">
+                <option value=1>Si</option>
+                <option value=0>No</option>
+            </select>
         </div>
         @error('available')
             <div class="alert alert-danger">{{ $message }}</div>

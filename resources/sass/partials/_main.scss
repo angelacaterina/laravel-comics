@@ -1,0 +1,24 @@
+main#main_content{
+    .links{
+        a{
+            font-size: 16px;
+            color: #333338;
+            text-decoration: none;
+            &.active,
+            &:hover{
+            color: #FC7523FC;       
+            }
+        }
+    }
+}
+
+main#main_content_articles{
+    padding: 20px;
+}
+
+main#main_content_categories{
+    padding: 20px;
+}
+main#main_content_tags{
+    padding: 20px;
+}

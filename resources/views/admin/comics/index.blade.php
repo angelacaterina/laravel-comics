@@ -30,7 +30,7 @@
                 {{-- <td>{{$value->description}}</td> --}}
                 {{-- <td>{{$value->cover}}</td> --}}
 
-                <td>{{$value->available}}</td>
+                <td>{{$value->available ? 'Si' : 'No'}}</td>
                 <td>{{$value->US_price}}</td>
                 <td>{{$value->on_sale_date}}</td>
                 <td>{{$value->volume_issue}}</td>
@@ -39,9 +39,9 @@
                 <td>{{$value->rated}}</td>
                 <td>
                     <a href="{{ route('admin.comics.show', ['comic'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
-                    <a href="{{ route('admin.comics.edit', ['comic'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
+                    <a href="{{ route('admin.comics.edit', ['comic'=>$value->slug] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
                     <!-- MODO 1: Eliminazione istantanea del Comics -->
-                    <form action="{{ route('admin.comics.destroy', ['comic'=> $value->id]) }}" method="post">
+                    <form action="{{ route('admin.comics.destroy', ['comic'=> $value->slug]) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt fa-xs fa-fw"></i></button>

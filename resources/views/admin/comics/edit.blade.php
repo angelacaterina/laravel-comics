@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <form action="{{route('admin.comics.update', ['comic'=>$comic->id])}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.comics.update', ['comic'=>$comic->slug])}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -29,7 +29,7 @@
         {{-- description --}}
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="3"> {{$comic->description}}</textarea>
+            <textarea class="form-control" name="description" id="description" rows="10"> {{$comic->description}}</textarea>
         </div>
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -48,7 +48,10 @@
         {{-- Available --}}
         <div class="form-group">
             <label for="available">Available</label>
-            <input class="form-control" type="text" name="available" id="available" value="{{$comic->available}}">
+            <select class="form-control" name="available" id="available">
+                <option value=1>Si</option>
+                <option value=0>No</option>
+            </select>
         </div>
         @error('available')
             <div class="alert alert-danger">{{ $message }}</div>

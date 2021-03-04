@@ -10944,3 +10944,105 @@ a.text-dark:focus {
   }
 }
 
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+.full-height {
+  height: 88vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+header#site_header nav.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: dimgrey;
+  padding: 0 20px;
+}
+
+header#site_header nav.nav div.link_nav a {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header#site_header nav.nav div.link_nav a.active,
+header#site_header nav.nav div.link_nav a:hover {
+  color: #0282FA;
+}
+
+main#main_content .links a {
+  font-size: 16px;
+  color: #333338;
+  text-decoration: none;
+}
+
+main#main_content .links a.active,
+main#main_content .links a:hover {
+  color: #FC7523FC;
+}
+
+main#main_content_articles {
+  padding: 20px;
+}
+
+main#main_content_categories {
+  padding: 20px;
+}
+
+main#main_content_tags {
+  padding: 20px;
+}
+
+footer#site_footer {
+  background: #F5F5F1;
+  text-align: center;
+  font-size: 13px;
+  padding: 30px;
+}
+

@@ -94,8 +94,11 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
+        $request['slug'] = Str::slug($request->title);
+        
         $validatedData = $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'description' => 'required',
             'cover' => 'nullable | image | max:500',
             'available' => 'required',

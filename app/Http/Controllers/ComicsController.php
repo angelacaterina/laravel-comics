@@ -14,7 +14,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comics::orderBy('id', 'desc')->get();
+        $comics = Comics::all();
         return view('guests.comics.index', compact('comics'));
     }
 }

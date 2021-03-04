@@ -26,7 +26,7 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
-                    {{-- <a class="navbar-brand" href="{{ route('blog') }}">Blog</a> --}}
+                    {{-- <a class="navbar-brand" href="{{ route('comics') }}">Comics</a> --}}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -73,8 +73,28 @@
                     </div>
                 </div>
             </nav>
+            <header id="site_header">
+                <div class="header_top"></div>
+                <nav class="nav">
+                    <div class="logo">
+                        <img src="{{ asset('img/download-8.png') }}" alt="">
+                    </div>
+                    <div class="link_nav">
+                        <a href="#">CHARACTERS</a>
+                        <a href="{{ route('comics') }}">COMICS</a>
+                        <a href="#">MOVIES</a>
+                        <a href="#">TV</a>
+                        <a href="#">GAMES</a>
+                        <a href="#">VIDEOS</a>
+                        <a href="#">NEWS</a>
+                        <a href="#">SHOP</a>
+                    </div>
+                    <div class="search"></div>
+                </nav>
+            </header>
+            
 
-            <main class="py-4">
+            <main id="main_content_comics" class="py-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -83,6 +103,8 @@
                     </div>
                 </div>
             </main>
+
+            <footer id="site_footer"></footer>
             
         </div>
     </body>
