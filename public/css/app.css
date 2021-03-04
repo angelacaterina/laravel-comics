@@ -11047,8 +11047,13 @@ main#main_content_comics section#comics_graphic_novels div.card_conteiner div.ca
   text-transform: uppercase;
 }
 
+main#main_content_comic {
+  font-family: "Roboto", sans-serif;
+}
+
 main#main_content_comic div.jumbotron_comics {
   width: 100vw;
+  margin-bottom: 24px;
 }
 
 main#main_content_comic div.jumbotron_comics div.image_jumbotron {
@@ -11107,6 +11112,73 @@ main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover span.
   top: 0%;
   left: 0%;
   padding: 0 10px;
+}
+
+main#main_content_comic div.info_comics_community {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics {
+  width: calc(100% - 32%);
+  margin-left: 10px;
+  margin-bottom: 80px;
+  padding-right: 30px;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics h1 {
+  font-size: 30px;
+  color: #003f5e;
+  font-weight: bold;
+  margin-top: 21px;
+  margin-bottom: 25px;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics p {
+  font-size: 17px;
+  color: #555555;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics div.check_availability {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  background: #55BA59;
+  border-bottom: 1px solid #357739;
+  color: white;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status {
+  width: 63%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status div.price {
+  padding: 17px 25px 13px;
+  font-size: 17px;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status div.status {
+  color: #BAF980;
+  padding: 17px 25px 13px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.check {
+  border-left: 1px solid #357739;
+  padding: 17px 25px 13px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+main#main_content_comic div.info_comics_community div.community {
+  margin-top: 74px;
+  width: 32%;
+  margin-right: 10px;
 }
 
 footer#site_footer {

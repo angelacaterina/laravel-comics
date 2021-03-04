@@ -18,17 +18,40 @@
                     <div class="view_galley">View Galley</div>
                     <span class="comic_book">Comic Book</span>
                 </div>
-                
             </div>
         </div>
+        {{-- /.jumbotron_comics --}}
+        <div class="info_comics_community">
+            <div class="info_comics">
+                <h1 class="title">{{ $comic->title }}</h1>
+
+                <div class="check_availability">
+                    <div class="price_status">
+                        <div class="price">
+                            U.S. Price: ${{$comic->US_price}} 
+                        </div>
+                        <div class="status">
+                            {{$comic->available ? 'available' : 'unavailable'}}
+                        </div>
+                    </div>
+                    
+                    <div class="check">check availability</div>
+                </div>
+
+                <p class="description">{{ $comic->description }}</p>
+            </div>
+            <div class="community">
+                <h2>Community</h2>
+            </div>
+        </div>
+        {{-- /.info_comics --}}
         
     </main>
     <div class="card mb-4">
 
         <div class="card-body">
             
-            <h4 class="card-title">{{ $comic->title }}</h4>
-            <p class="card-text">{{ $comic->description }}</p>
+            
 
             <p>Available: {{$comic->available ? 'si' : 'no'}}</p>
             <p>US price: {{$comic->US_price}} $</p>

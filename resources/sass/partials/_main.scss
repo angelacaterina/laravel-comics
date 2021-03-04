@@ -60,12 +60,13 @@ main#main_content_comics{
 
         
     }
-    
 }
 
 main#main_content_comic{
+    font-family: 'Roboto', sans-serif;
     div.jumbotron_comics{
         width: 100vw;
+        margin-bottom: 24px;
         div.image_jumbotron{
             width: 100%;
             height: 376px;
@@ -115,6 +116,63 @@ main#main_content_comic{
                     padding: 0 10px;
                 }
             }
+        }
+    }
+    div.info_comics_community{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        div.info_comics{
+            width: calc(100% - 32%);
+            margin-left: 10px;
+            margin-bottom: 80px;
+            padding-right: 30px;
+            h1{
+                font-size: 30px;
+                color: #003f5e;
+                font-weight: bold;
+                margin-top: 21px;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 17px;
+                color: #555555;
+            }
+            div.check_availability{
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                background: #55BA59;
+                border-bottom: 1px solid #357739;
+                color: white;
+                div.price_status{
+                    width: 63%;
+                    display: flex;
+                    justify-content: space-between;
+                    div.price{
+                        padding: 17px 25px 13px;
+                        font-size: 17px;
+                    }
+                    div.status{
+                        color: #BAF980;
+                        padding: 17px 25px 13px;
+                        font-size: 17px;
+                        text-transform: uppercase;
+                    }
+                }
+                div.check{
+                    border-left: 1px solid #357739;
+                    padding: 17px 25px 13px;
+                    font-size: 17px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        div.community{
+            margin-top: 74px;
+            width: 32%;
+            margin-right: 10px;
         }
     }
 }
