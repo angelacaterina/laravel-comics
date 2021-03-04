@@ -11000,15 +11000,51 @@ header#site_header nav.nav div.link_nav a:hover {
   color: #0282FA;
 }
 
-main#main_content .links a {
-  font-size: 16px;
-  color: #333338;
-  text-decoration: none;
+main#main_content_comics {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
-main#main_content .links a.active,
-main#main_content .links a:hover {
-  color: #FC7523FC;
+main#main_content_comics section#comics_graphic_novels {
+  width: 100%;
+  background: #1C1C1C;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics {
+  width: calc(100% / 4);
+  padding: 0 10px;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.comics wi a img {
+  display: block;
+  width: 100%;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.title_available {
+  padding-top: 10px;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.title_available p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.title_available p.title_comics {
+  color: white;
+}
+
+main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.title_available p.available_comics {
+  color: #0282F9;
+  text-transform: uppercase;
 }
 
 footer#site_footer {

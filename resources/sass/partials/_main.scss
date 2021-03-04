@@ -1,13 +1,65 @@
-main#main_content{
-    .links{
-        a{
-            font-size: 16px;
-            color: #333338;
-            text-decoration: none;
-            &.active,
-            &:hover{
-            color: #FC7523FC;       
+main#main_content_comics{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    section#comics_graphic_novels{
+        width: 100%;
+        // height: 585px;
+        background: #1C1C1C;
+        
+        // div.title{
+        //     h2{
+        //         font-family: 'Anton', sans-serif;
+        //         font-size: 30px;
+        //         letter-spacing: 1px;
+        //         margin: 0;
+        //         padding-top: 10px;
+        //         padding-right: 30px;
+        //         padding-bottom: 8px;
+        //         padding-left: 30px;
+        //         color: #fff;
+        //         background-color: #0282F9;
+        //     }
+        // }
+        div.card_conteiner{
+            display: flex;
+            justify-content: flex-start;
+            overflow-x: scroll;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            div.card_comics{
+                width: calc(100% / 4);
+                
+                padding: 0 10px;
+                div.comics{
+                    wi
+                    a{
+                        img{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                div.title_available{
+                    padding-top: 10px;
+                    p{
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: bold;
+                        &.title_comics{
+                            color: white;
+                        }
+                        &.available_comics{
+                            color: #0282F9;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                
             }
         }
+
+        
     }
+    
 }
