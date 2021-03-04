@@ -6,6 +6,7 @@ use App\Comics;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ComicsController extends Controller
 {
@@ -16,7 +17,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comics::all();
+        $comics = Comics::orderBy('id', 'desc')->get();
         return view('admin.comics.index', compact('comics'));
     }
 
@@ -38,8 +39,11 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
+        $request['slug'] = Str::slug($request->title);
+
         $validatedData = $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'description' => 'required',
             'cover' => 'nullable | image | max:500',
             'available' => 'required',
@@ -55,9 +59,6 @@ class ComicsController extends Controller
         $validatedData['cover'] = $cover;
 
         Comics::create($validatedData);
-
-        // $new_comics = Comics::orderBy('id', 'desc')->first();
-        // $new_article->tags()->attach($request->tags);
 
         return redirect()->route('admin.comics.index');
     }
@@ -81,7 +82,7 @@ class ComicsController extends Controller
      */
     public function edit(Comics $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -93,7 +94,22 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'cover' => 'nullable | image | max:500',
+            'available' => 'required',
+            'US_price'=>'required',
+            'on_sale_date'=>'required',
+            'volume_issue'=>'required',
+            'trim_size'=>'required',
+            'page_count'=>'required',
+            'rated'=>'required',
+        ]);
+
+        $comic->update($validatedData);
+
+        return redirect()->route('admin.comics.index');
     }
 
     /**
@@ -104,6 +120,7 @@ class ComicsController extends Controller
      */
     public function destroy(Comics $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('admin.comics.index');
     }
 }

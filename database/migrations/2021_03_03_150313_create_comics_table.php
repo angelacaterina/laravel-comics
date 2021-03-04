@@ -17,7 +17,7 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('description');
-            // $table->string('slug')->unique();
+            $table->string('slug')->unique();
             $table->string('cover')->nullable();
 
             $table->boolean('available');

@@ -21,8 +21,8 @@ Route::get('contacts', 'PageController@contacts')->name('contacts');
 // Route::get('blog/{post}', 'PostController@show');
 
 // registrazione Admin
-// Auth::routes();
-Auth::routes(['register'=>false]);
+Auth::routes();
+// Auth::routes(['register'=>false]);
 
 // // Admin
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->group(function () {

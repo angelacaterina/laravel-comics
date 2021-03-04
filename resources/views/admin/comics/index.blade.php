@@ -8,6 +8,7 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
+                <th>Slug</th>
                 {{-- <th>Description</th> --}}
                 {{-- <th>Cover</th> --}}
                 <th>Available</th>
@@ -25,6 +26,7 @@
             <tr>
                 <td>{{$value->id}}</td>
                 <td>{{$value->title}}</td>
+                <td>{{$value->slug}}</td>
                 {{-- <td>{{$value->description}}</td> --}}
                 {{-- <td>{{$value->cover}}</td> --}}
 
@@ -36,7 +38,7 @@
                 <td>{{$value->page_count}}</td>
                 <td>{{$value->rated}}</td>
                 <td>
-                    <a href="{{ route('admin.comics.show', ['comic'=>$value->id] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
+                    <a href="{{ route('admin.comics.show', ['comic'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
                     <a href="{{ route('admin.comics.edit', ['comic'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
                     <!-- MODO 1: Eliminazione istantanea del Comics -->
                     <form action="{{ route('admin.comics.destroy', ['comic'=> $value->id]) }}" method="post">
