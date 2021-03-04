@@ -2,12 +2,21 @@
 
 @section('content')
     <h1>All comics for the admin</h1>
+    <a href="{{route('admin.comics.create')}}" class="btn btn-dark text-white">Create a new comics</a>
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Title</th>
-                <th>Slug</th>
+                {{-- <th>Description</th> --}}
+                {{-- <th>Cover</th> --}}
+                <th>Available</th>
+                <th>US price</th>
+                <th>On sale date</th>
+                <th>Volume/Issue#</th>
+                <th>Trim size</th>
+                <th>Page count</th>
+                <th>Rated</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -16,12 +25,21 @@
             <tr>
                 <td>{{$value->id}}</td>
                 <td>{{$value->title}}</td>
-                <td>{{$value->slug}}</td>
+                {{-- <td>{{$value->description}}</td> --}}
+                {{-- <td>{{$value->cover}}</td> --}}
+
+                <td>{{$value->available}}</td>
+                <td>{{$value->US_price}}</td>
+                <td>{{$value->on_sale_date}}</td>
+                <td>{{$value->volume_issue}}</td>
+                <td>{{$value->trim_size}}</td>
+                <td>{{$value->page_count}}</td>
+                <td>{{$value->rated}}</td>
                 <td>
-                    <a href="{{ route('admin.comics.show', ['post'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
-                    <a href="{{ route('admin.comics.edit', ['post'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
+                    <a href="{{ route('admin.comics.show', ['comic'=>$value->id] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
+                    <a href="{{ route('admin.comics.edit', ['comic'=>$value->id] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>
                     <!-- MODO 1: Eliminazione istantanea del Comics -->
-                    <form action="{{ route('admin.comics.destroy', ['post'=> $value->id]) }}" method="post">
+                    <form action="{{ route('admin.comics.destroy', ['comic'=> $value->id]) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt fa-xs fa-fw"></i></button>

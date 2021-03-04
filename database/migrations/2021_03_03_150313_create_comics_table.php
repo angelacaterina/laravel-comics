@@ -22,7 +22,7 @@ class CreateComicsTable extends Migration
 
             $table->boolean('available');
             $table->float('US_price', 5, 2);
-            $table->date('on_sala_date');
+            $table->date('on_sale_date');
             $table->integer('volume_issue');
             $table->string('trim_size');
             $table->integer('page_count');

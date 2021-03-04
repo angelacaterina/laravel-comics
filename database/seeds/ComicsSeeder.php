@@ -22,7 +22,7 @@ class ComicsSeeder extends Seeder
 
             $newComics->available = $faker->boolean();
             $newComics->US_price = $faker->randomFloat(2, 0, 10);
-            $newComics->on_sala_date = $faker->dateTime();
+            $newComics->on_sale_date = $faker->dateTime();
             $newComics->volume_issue = $faker->numberBetween(0, 1000);
             $newComics->trim_size = $faker->word();
             $newComics->page_count = $faker->numberBetween(0, 100);
