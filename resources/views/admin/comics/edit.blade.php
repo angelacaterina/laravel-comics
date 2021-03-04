@@ -45,6 +45,16 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        {{-- jumbotron --}}
+        <div class="form-group">
+            <label for="jumbotron">Jumbotron</label>
+            <input type="file" class="form-control-file" name="jumbotron" id="jumbotron" placeholder="Add a jumbotron image" aria-describedby="jumbotronHelper">
+            <small id="jumbotronHelper" class="form-text text-muted">Add a jumbotron image for the current post</small>
+        </div>
+        @error('jumbotron')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
         {{-- Available --}}
         <div class="form-group">
             <label for="available">Available</label>

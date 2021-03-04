@@ -10957,6 +10957,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header#site_header {
@@ -11001,7 +11002,6 @@ header#site_header nav.nav div.link_nav a:hover {
 }
 
 main#main_content_comics {
-  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
 }
 
@@ -11045,6 +11045,68 @@ main#main_content_comics section#comics_graphic_novels div.card_conteiner div.ca
 main#main_content_comics section#comics_graphic_novels div.card_conteiner div.card_comics div.title_available p.available_comics {
   color: #0282F9;
   text-transform: uppercase;
+}
+
+main#main_content_comic div.jumbotron_comics {
+  width: 100vw;
+}
+
+main#main_content_comic div.jumbotron_comics div.image_jumbotron {
+  width: 100%;
+  height: 376px;
+  overflow: hidden;
+  position: relative;
+}
+
+main#main_content_comic div.jumbotron_comics div.image_jumbotron img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+main#main_content_comic div.jumbotron_comics div.banner_jumbotron {
+  width: 100%;
+  height: 76px;
+  background: #0182F9;
+}
+
+main#main_content_comic div.jumbotron_comics div.cover_jumbotron {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover {
+  width: 200px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  border: 1px solid white;
+}
+
+main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover img {
+  width: 100%;
+  display: block;
+}
+
+main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover div.view_galley {
+  font-size: 13px;
+  color: white;
+  background: #00A9D9;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover span.comic_book {
+  font-size: 13px;
+  color: white;
+  background: rgba(0, 102, 170, 0.9);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 0 10px;
 }
 
 footer#site_footer {

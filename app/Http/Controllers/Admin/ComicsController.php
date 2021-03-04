@@ -46,6 +46,7 @@ class ComicsController extends Controller
             'slug' => 'required',
             'description' => 'required',
             'cover' => 'nullable | image | max:500',
+            'jumbotron' => 'nullable | image | max:1000',
             'available' => 'required',
             'US_price'=>'required',
             'on_sale_date'=>'required',
@@ -57,6 +58,9 @@ class ComicsController extends Controller
 
         $cover = Storage::put('cover_imgs', $request->cover);
         $validatedData['cover'] = $cover;
+
+        $jumbotron = Storage::put('jumbotron_imgs', $request->jumbotron);
+        $validatedData['jumbotron'] = $jumbotron;
 
         Comics::create($validatedData);
 
@@ -95,6 +99,7 @@ class ComicsController extends Controller
     public function update(Request $request, Comics $comic)
     {
         Storage::delete($comic->cover);
+        Storage::delete($comic->jumbotron);
         
         $request['slug'] = Str::slug($request->title);
         
@@ -103,6 +108,7 @@ class ComicsController extends Controller
             'slug' => 'required',
             'description' => 'required',
             'cover' => 'nullable | image | max:500',
+            'jumbotron' => 'nullable | image | max:1000',
             'available' => 'required',
             'US_price'=>'required',
             'on_sale_date'=>'required',
@@ -114,6 +120,9 @@ class ComicsController extends Controller
         
         $cover = Storage::put('cover_imgs', $request->cover);
         $validatedData['cover'] = $cover;
+
+        $jumbotron = Storage::put('jumbotron_imgs', $request->jumbotron);
+        $validatedData['jumbotron'] = $jumbotron;
       
         $comic->update($validatedData);
 
@@ -129,6 +138,7 @@ class ComicsController extends Controller
     public function destroy(Comics $comic)
     {
         Storage::delete($comic->cover);
+        Storage::delete($comic->jumbotron);
 
         $comic->delete();
         return redirect()->route('admin.comics.index');

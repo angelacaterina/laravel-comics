@@ -19,6 +19,7 @@ Route::get('contacts', 'PageController@contacts')->name('contacts');
 // PostController esterno, non si riferisce a quello dell'admin
 Route::get('comics', 'ComicsController@index')->name('comics');
 Route::get('comics/{comic}', 'ComicsController@show');
+// Route::resource('comics', 'ComicsController');
 
 // registrazione Admin
 Auth::routes();

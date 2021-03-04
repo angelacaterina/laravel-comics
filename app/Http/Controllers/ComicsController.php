@@ -17,4 +17,15 @@ class ComicsController extends Controller
         $comics = Comics::all();
         return view('guests.comics.index', compact('comics'));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Comics  $comics
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Comics $comic)
+    {
+        return view('guests.comics.show', compact('comic'));
+    }
 }

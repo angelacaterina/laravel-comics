@@ -1,5 +1,4 @@
 main#main_content_comics{
-    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     section#comics_graphic_novels{
         width: 100%;
@@ -62,4 +61,60 @@ main#main_content_comics{
         
     }
     
+}
+
+main#main_content_comic{
+    div.jumbotron_comics{
+        width: 100vw;
+        div.image_jumbotron{
+            width: 100%;
+            height: 376px;
+            overflow: hidden;
+            position: relative;
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        div.banner_jumbotron{
+            width: 100%;
+            height: 76px;
+            background: #0182F9;
+        }
+        div.cover_jumbotron{
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+            div.cover{
+                width: 200px;
+                margin-bottom: 20px;
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+                border: 1px solid white;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                div.view_galley{
+                    font-size: 13px;
+                    color: white;
+                    background: #00A9D9;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+                span.comic_book{
+                    font-size: 13px;
+                    color: white;
+                    background: rgba(0,102,170,0.9);
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
 }

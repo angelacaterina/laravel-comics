@@ -1,24 +1,44 @@
 @extends('layouts.guests.app')
 
 @section('content')
-    <h1>Index</h1>
-    @foreach ($comics as $item)
-        <div class="card mb-4">
-            <div class="card-body">
-                @if($item->cover)
-                <img src="{{ asset('storage/' . $item->cover)}}" alt="">
+    
+    <main id="main_content_comic">
+        <div class="jumbotron_comics">
+            <div class="image_jumbotron">
+                @if($comic->jumbotron)
+                    <img src="{{ asset('storage/' . $comic->jumbotron) }}" alt="">
                 @endif
-                <h4 class="card-title">{{ $item->title }}</h4>
-                <p class="card-text">{{ $item->description }}</p>
-
-                <p>Available: {{$item->available ? 'si' : 'no'}}</p>
-                <p>US price: {{$item->US_price}} $</p>
-                <p>On sale date: {{$item->on_sale_date}}</p>
-                <p>Volume/Issue#: {{$item->volume_issue}}</p>
-                <p>Trim size: {{$item->trim_size}}</p>
-                <p>Page count: {{$item->page_count}}</p>
-                <p>Rated: {{$item->rated}}</p>
+            </div>
+            <div class="banner_jumbotron"></div>
+            <div class="cover_jumbotron">
+                <div class="cover">
+                    @if($comic->cover)
+                        <img src="{{ asset('storage/' . $comic->cover)}}" alt="">
+                    @endif
+                    <div class="view_galley">View Galley</div>
+                    <span class="comic_book">Comic Book</span>
+                </div>
+                
             </div>
         </div>
-    @endforeach
+        
+    </main>
+    <div class="card mb-4">
+
+        <div class="card-body">
+            
+            <h4 class="card-title">{{ $comic->title }}</h4>
+            <p class="card-text">{{ $comic->description }}</p>
+
+            <p>Available: {{$comic->available ? 'si' : 'no'}}</p>
+            <p>US price: {{$comic->US_price}} $</p>
+            <p>On sale date: {{$comic->on_sale_date}}</p>
+            <p>Volume/Issue#: {{$comic->volume_issue}}</p>
+            <p>Trim size: {{$comic->trim_size}}</p>
+            <p>Page count: {{$comic->page_count}}</p>
+            <p>Rated: {{$comic->rated}}</p>
+        </div>
+    </div>
+       
+    
 @endsection
