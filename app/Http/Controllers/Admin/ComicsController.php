@@ -94,6 +94,8 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
+        Storage::delete($comic->cover);
+        
         $request['slug'] = Str::slug($request->title);
         
         $validatedData = $request->validate([
@@ -109,7 +111,10 @@ class ComicsController extends Controller
             'page_count'=>'required',
             'rated'=>'required',
         ]);
-
+        
+        $cover = Storage::put('cover_imgs', $request->cover);
+        $validatedData['cover'] = $cover;
+      
         $comic->update($validatedData);
 
         return redirect()->route('admin.comics.index');
@@ -123,6 +128,8 @@ class ComicsController extends Controller
      */
     public function destroy(Comics $comic)
     {
+        Storage::delete($comic->cover);
+
         $comic->delete();
         return redirect()->route('admin.comics.index');
     }

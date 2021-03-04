@@ -1,16 +1,37 @@
 header#site_header {
+    border-bottom: 1px solid #EBEBEB;
+    div.header_top{
+        width: 100%;
+        height: 40px;
+        background: #0282FA;
+    }
     nav.nav{
+        width: 90%;
+        height: 115px;
+        margin: 0 auto;
+        padding: 0 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: dimgrey;
-        padding: 0 20px;
+        div.logo{
+            a{
+                img{
+                    width: 81px;
+                    height: 81px;
+                    // vertical-align: middle;
+                }
+            }
+        }
         div.link_nav{
             a{
-                font-size: 16px;
-                color: white;
+                font-size: 18px;
+                color: #464646;
+                font-family: 'Anton', sans-serif;
+                letter-spacing: 1px;
                 font-weight: bold;
                 text-decoration: none;
+                margin: 0 20px;
+                padding-bottom: 50px;
                 &.active,
                 &:hover{
                 color: #0282FA;       

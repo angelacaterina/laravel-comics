@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guests.app')
 
 @section('content')
     <h1>Home page</h1>

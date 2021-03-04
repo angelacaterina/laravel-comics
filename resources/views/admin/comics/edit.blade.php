@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.admin.dashboard')
 
 @section('content')
     <h1>Edit a new Comics</h1>
