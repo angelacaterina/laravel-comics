@@ -4,6 +4,33 @@ header#site_header {
         width: 100%;
         height: 40px;
         background: #0282FA;
+        display: flex;
+        justify-content: flex-end;
+        div{
+            width: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #3797F6;
+
+            -webkit-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+
+            -webkit-transform:skewX(30deg);
+            -ms-transform:skewX(30deg);
+            transform:skewX(-25deg);
+            &:first-child{
+                background: white;
+            }
+            a{
+                img{
+                    transform:skewX(25deg);
+                    height: 24px;
+                }
+            }
+        }
+        
     }
     nav.nav{
         width: 90%;

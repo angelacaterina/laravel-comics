@@ -108,7 +108,6 @@
         {{-- /.talent_specs --}}
 
         @include('layouts.guests.partials.shop')
-
     </main>
     {{-- /#main_content_comic --}}
 
