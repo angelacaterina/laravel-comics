@@ -30,7 +30,6 @@ header#site_header {
                 }
             }
         }
-        
     }
     nav.nav{
         width: 90%;
@@ -45,7 +44,6 @@ header#site_header {
                 img{
                     width: 81px;
                     height: 81px;
-                    // vertical-align: middle;
                 }
             }
         }
@@ -64,6 +62,13 @@ header#site_header {
                 color: #0282FA;       
                 }
             }
+        }
+        div.search{
+            font-size: 18px;
+            color: #464646;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 1px;
+            font-weight: bold;
         }
     }
 }

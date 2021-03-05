@@ -18,6 +18,7 @@ Route::get('about', 'PageController@about')->name('about');
 Route::get('contacts', 'PageController@contacts')->name('contacts');
 // PostController esterno, non si riferisce a quello dell'admin
 Route::resource('guests/comics', 'ComicsController');
+Route::resource('guests/collections', 'CollectionController');
 
 // registrazione Admin
 Auth::routes();
@@ -27,4 +28,5 @@ Auth::routes();
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', 'HomeController@index')->name('index');
     Route::resource('comics', 'ComicsController');
+    Route::resource('collections', 'CollectionController');
 });

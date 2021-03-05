@@ -11050,6 +11050,14 @@ header#site_header nav.nav div.link_nav a:hover {
   color: #0282FA;
 }
 
+header#site_header nav.nav div.search {
+  font-size: 18px;
+  color: #464646;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 main#main_content_comics {
   font-family: "Roboto", sans-serif;
 }

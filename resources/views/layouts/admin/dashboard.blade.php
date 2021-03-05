@@ -30,7 +30,16 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
+
+                    <a class="navbar-brand" href="#">Characters</a>
                     <a class="navbar-brand" href="{{ route('comics.index') }}">Comics</a>
+                    <a class="navbar-brand" href="#">Movies</a>
+                    <a class="navbar-brand" href="#">TV</a>
+                    <a class="navbar-brand" href="#">Games</a>
+                    <a class="navbar-brand" href="#">Videos</a>
+                    <a class="navbar-brand" href="#">News</a>
+                    <a class="navbar-brand" href="#">Shop</a>
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -84,7 +93,7 @@
                         <ul class="list-unstyled">
                             <li><a href="{{ route('admin.index') }}"> <i class="fas fa-tachometer-alt fa-lg fa-fw"></i> Dashboard </a></li>
                             <li><a href="{{ route('admin.comics.index') }}"> <i class="fas fa-book fa-lg fa-fw"></i> Comics </a></li>
-                            <li><a href="#"> <i class="fas fa-folder-open fa-lg fa-fw"></i> Series </a></li>
+                            <li><a href="{{ route('admin.collections.index') }}"> <i class="fas fa-folder-open fa-lg fa-fw"></i> Series </a></li>
                             <li><a href="#"> <i class="fas fa-tag fa-lg fa-fw"></i> Tags </a></li>
                         </ul>
                     </div>
