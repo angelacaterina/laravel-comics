@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="62px" viewBox="0 0 42 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-5" transform="translate(-188.000000, -133.000000)" filter="url(#filter-1)">
+            <g transform="translate(189.000000, 134.000000)">
+                <path d="M19.8785,0.0001 C8.8995,0.0001 0.0005,8.9001 0.0005,19.8781 C0.0005,32.5261 19.8785,60.0001 19.8785,60.0001 C19.8785,60.0001 39.7565,32.5261 39.7565,19.8781 C39.7565,8.9001 30.8575,0.0001 19.8785,0.0001 Z" id="Stroke-1" stroke="#231F20" stroke-width="2"></path>
+                <path d="M27.5352,18.5933 C27.5352,22.8223 24.1072,26.2503 19.8782,26.2503 C15.6492,26.2503 12.2222,22.8223 12.2222,18.5933 C12.2222,14.3643 15.6492,10.9363 19.8782,10.9363 C24.1072,10.9363 27.5352,14.3643 27.5352,18.5933 Z" id="Stroke-3" stroke="#231F20" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

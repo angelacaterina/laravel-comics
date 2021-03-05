@@ -107,15 +107,8 @@
         </section>
         {{-- /.talent_specs --}}
 
-        <section class="shop">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </section>
-        {{-- /.shop --}}
+        @include('layouts.guests.partials.shop')
 
-        
     </main>
     {{-- /#main_content_comic --}}
 

@@ -17,3 +17,25 @@ html, body {
     width: calc(100%/2);
 }
 
+// layouts.guests.partials.shop
+section.shop{
+    width: 100%;
+    background: #0282F9;
+    div.shop_content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        a{
+            padding: 30px 10px;
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            img{
+                height: 55px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+

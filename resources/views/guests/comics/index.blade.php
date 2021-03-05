@@ -24,5 +24,8 @@
                 @endforeach           
             </div>
         </section>
+
+
+        @include('layouts.guests.partials.shop')
     </main>
 @endsection

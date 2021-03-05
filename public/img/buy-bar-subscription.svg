@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(-176.000000, -131.000000)" filter="url(#filter-1)">
+            <g transform="translate(177.000000, 132.000000)">
+                <path d="M41.6854,11.5161 L38.3114,1.9551 C37.7744,0.4351 36.0904,-0.3709 34.5704,0.1661 L1.9564,11.6771 C0.4344,12.2131 -0.3706,13.8971 0.1664,15.4171 L16.6224,62.0441 C17.1594,63.5651 18.8424,64.3701 20.3634,63.8331 L35.7754,58.3941" id="Stroke-1" stroke="#231F20" stroke-width="2"></path>
+                <path d="M60.7196,12.7271 L41.6856,11.5161 L54.7666,48.5821 C55.3036,50.1031 54.4986,51.7871 52.9776,52.3231 L35.7756,58.3941 L57.7256,59.7901 C59.3346,59.8931 60.7356,58.6601 60.8376,57.0501 L63.4586,15.8391 C63.5616,14.2301 62.3286,12.8291 60.7196,12.7271 Z" id="Stroke-3" stroke="#231F20" stroke-width="2"></path>
+                <path d="M35.7753,58.3941 L52.9773,52.3231 C54.4993,51.7871 55.3033,50.1031 54.7663,48.5821 L41.6853,11.5161" id="Stroke-5" stroke="#231F20" stroke-width="2"></path>
+                <polygon id="Stroke-7" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22.8876 12.7525 17.9336 38.8545 28.3346 35.2985 31.9906 51.6535 36.8846 25.1975 25.7906 28.9905"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
