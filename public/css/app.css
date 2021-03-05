@@ -10960,6 +10960,10 @@ body {
   overflow-x: hidden;
 }
 
+.col_2 {
+  width: calc(100%/2);
+}
+
 header#site_header {
   border-bottom: 1px solid #EBEBEB;
 }
@@ -11096,11 +11100,15 @@ main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover img {
 }
 
 main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover div.view_galley {
+  width: 100%;
   font-size: 13px;
   color: white;
   background: #00A9D9;
   text-transform: uppercase;
   text-align: center;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
 }
 
 main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover span.comic_book {
@@ -11114,21 +11122,25 @@ main#main_content_comic div.jumbotron_comics div.cover_jumbotron div.cover span.
   padding: 0 10px;
 }
 
-main#main_content_comic div.info_comics_community {
+main#main_content_comic section.view_comics {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+main#main_content_comic section.view_comics div.info_comics_community {
   width: 70%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics {
   width: calc(100% - 32%);
   margin-left: 10px;
   margin-bottom: 80px;
   padding-right: 30px;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics h1 {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics h1 {
   font-size: 30px;
   color: #003f5e;
   font-weight: bold;
@@ -11136,12 +11148,12 @@ main#main_content_comic div.info_comics_community div.info_comics h1 {
   margin-bottom: 25px;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics p {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics p.description {
   font-size: 17px;
   color: #555555;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics div.check_availability {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics div.check_availability {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
@@ -11150,35 +11162,95 @@ main#main_content_comic div.info_comics_community div.info_comics div.check_avai
   color: white;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics div.check_availability div.price_status {
   width: 63%;
   display: flex;
   justify-content: space-between;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status div.price {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics div.check_availability div.price_status div.price {
   padding: 17px 25px 13px;
   font-size: 17px;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.price_status div.status {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics div.check_availability div.price_status div.status {
   color: #BAF980;
   padding: 17px 25px 13px;
   font-size: 17px;
   text-transform: uppercase;
 }
 
-main#main_content_comic div.info_comics_community div.info_comics div.check_availability div.check {
+main#main_content_comic section.view_comics div.info_comics_community div.info_comics div.check_availability div.check {
   border-left: 1px solid #357739;
   padding: 17px 25px 13px;
   font-size: 17px;
   text-transform: uppercase;
 }
 
-main#main_content_comic div.info_comics_community div.community {
+main#main_content_comic section.view_comics div.info_comics_community div.community {
   margin-top: 74px;
   width: 32%;
   margin-right: 10px;
+}
+
+main#main_content_comic section.talent_specs {
+  background: #F6F6F6;
+  border-top: 1px solid #ffffff;
+  padding-bottom: 100px;
+}
+
+main#main_content_comic section.talent_specs div.tables {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 10px;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent,
+main#main_content_comic section.talent_specs div.tables div.specs {
+  padding-right: 40px;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent h2,
+main#main_content_comic section.talent_specs div.tables div.specs h2 {
+  color: #003F5E;
+  padding: 25px 0;
+  margin-bottom: 0;
+  font-size: 26px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent div.table_content,
+main#main_content_comic section.talent_specs div.tables div.specs div.table_content {
+  display: flex;
+  padding: 12px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 14px;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent div.table_content div.name_table,
+main#main_content_comic section.talent_specs div.tables div.specs div.table_content div.name_table {
+  width: 160px;
+  font-weight: bold;
+  color: #003f5e;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent div.table_content div.body_table,
+main#main_content_comic section.talent_specs div.tables div.specs div.table_content div.body_table {
+  color: #3F3F3F;
+}
+
+main#main_content_comic section.talent_specs div.tables div.talent div.table_content div.body_table a,
+main#main_content_comic section.talent_specs div.tables div.specs div.table_content div.body_table a {
+  color: #00BAE6;
+  text-decoration: none;
+}
+
+main#main_content_comic section.shop {
+  width: 100%;
+  height: 70px;
+  background: #0282F9;
 }
 
 footer#site_footer {

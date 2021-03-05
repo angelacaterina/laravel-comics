@@ -99,11 +99,15 @@ main#main_content_comic{
                     display: block;
                 }
                 div.view_galley{
+                    width: 100%;
                     font-size: 13px;
                     color: white;
                     background: #00A9D9;
                     text-transform: uppercase;
                     text-align: center;
+                    position: absolute;
+                    bottom: 0%;
+                    left: 0%;
                 }
                 span.comic_book{
                     font-size: 13px;
@@ -118,61 +122,112 @@ main#main_content_comic{
             }
         }
     }
-    div.info_comics_community{
-        width: 70%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        div.info_comics{
-            width: calc(100% - 32%);
-            margin-left: 10px;
-            margin-bottom: 80px;
-            padding-right: 30px;
-            h1{
-                font-size: 30px;
-                color: #003f5e;
-                font-weight: bold;
-                margin-top: 21px;
-                margin-bottom: 25px;
-            }
-            p{
-                font-size: 17px;
-                color: #555555;
-            }
-            div.check_availability{
-                width: 100%;
-                margin-bottom: 20px;
-                display: flex;
-                background: #55BA59;
-                border-bottom: 1px solid #357739;
-                color: white;
-                div.price_status{
-                    width: 63%;
+    section.view_comics{
+        border-bottom: 1px solid #e3e3e3;
+        div.info_comics_community{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            
+            div.info_comics{
+                width: calc(100% - 32%);
+                margin-left: 10px;
+                margin-bottom: 80px;
+                padding-right: 30px;
+                h1{
+                    font-size: 30px;
+                    color: #003f5e;
+                    font-weight: bold;
+                    margin-top: 21px;
+                    margin-bottom: 25px;
+                }
+                p.description{
+                    font-size: 17px;
+                    color: #555555;
+                }
+                div.check_availability{
+                    width: 100%;
+                    margin-bottom: 20px;
                     display: flex;
-                    justify-content: space-between;
-                    div.price{
-                        padding: 17px 25px 13px;
-                        font-size: 17px;
+                    background: #55BA59;
+                    border-bottom: 1px solid #357739;
+                    color: white;
+                    div.price_status{
+                        width: 63%;
+                        display: flex;
+                        justify-content: space-between;
+                        div.price{
+                            padding: 17px 25px 13px;
+                            font-size: 17px;
+                        }
+                        div.status{
+                            color: #BAF980;
+                            padding: 17px 25px 13px;
+                            font-size: 17px;
+                            text-transform: uppercase;
+                        }
                     }
-                    div.status{
-                        color: #BAF980;
+                    div.check{
+                        border-left: 1px solid #357739;
                         padding: 17px 25px 13px;
                         font-size: 17px;
                         text-transform: uppercase;
                     }
                 }
-                div.check{
-                    border-left: 1px solid #357739;
-                    padding: 17px 25px 13px;
-                    font-size: 17px;
-                    text-transform: uppercase;
-                }
+            }
+            div.community{
+                margin-top: 74px;
+                width: 32%;
+                margin-right: 10px;
             }
         }
-        div.community{
-            margin-top: 74px;
-            width: 32%;
-            margin-right: 10px;
+    }
+    section.talent_specs{
+        background: #F6F6F6;
+        border-top: 1px solid #ffffff;
+        padding-bottom: 100px;
+        div.tables{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 10px;
+            div.talent,
+            div.specs{
+                padding-right: 40px;
+                h2{
+                    color: #003F5E;
+                    padding: 25px 0;
+                    margin-bottom: 0;
+                    font-size: 26px;
+                    border-bottom: 1px solid #e3e3e3;
+                }
+                div.table_content{
+                    display: flex;
+                    padding: 12px 0;
+                    border-top: 1px solid #ffffff;
+                    border-bottom: 1px solid #e3e3e3;
+                    font-size: 14px;
+                    div.name_table{
+                        width: 160px;
+                        font-weight: bold;
+                        color: #003f5e;
+                    }
+                    div.body_table{
+                        color: #3F3F3F;
+                        a{
+                            color: #00BAE6;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                
+            }
         }
+    }
+    section.shop{
+        width: 100%;
+        height: 70px;
+        background: #0282F9;
     }
 }

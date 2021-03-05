@@ -12,7 +12,7 @@
                     <div class="card_comics">
                         <div class="comics">
                             @if($item->cover)
-                                <a href=""><img src="{{ asset('storage/' . $item->cover)}}" alt=""></a>
+                                <a href="{{ route('comics.show', ['comic'=>$item->slug] )}}"><img src="{{ asset('storage/' . $item->cover)}}" alt=""></a>
                             @endif
                         
                             <div class="title_available">
