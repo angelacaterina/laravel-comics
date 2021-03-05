@@ -73,7 +73,7 @@
                     <div class="table_content">
                         <div class="name_table">Series:</div>
                         <div class="body_table">
-                            <a href="#">Nome serie</a>
+                            <a href="#">{{$comic->collection ? $comic->collection->genre : 'N/A'}}</a>
                         </div>
                     </div>
 

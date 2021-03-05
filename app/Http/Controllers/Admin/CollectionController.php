@@ -39,10 +39,15 @@ class CollectionController extends Controller
      */
     public function store(Request $request)
     {
+        if(!$request->hasFile('cover')){
+            return redirect()->route('admin.collections.create')->with('success', 'Devi inserire la cover');
+        }
+
         $request['slug'] = Str::slug($request->title);
 
         $validatedData = $request->validate([
             'title' => 'required',
+            'genre' => 'required',
             'slug' => 'required',
             'cover' => 'nullable | image | max:500',
         ]);
@@ -86,20 +91,28 @@ class CollectionController extends Controller
      */
     public function update(Request $request, Collection $collection)
     {
-        Storage::delete($collection->cover);
-        
-        $request['slug'] = Str::slug($request->title);
-        
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'slug' => 'required',
-            'cover' => 'nullable | image | max:500',
-        ]);
-        
-        $cover = Storage::put('collection_cover_imgs', $request->cover);
-        $validatedData['cover'] = $cover;
-
-        $collection->update($validatedData);
+        if($request->hasFile('cover')){
+            Storage::delete($collection->cover);
+            $request['slug'] = Str::slug($request->title);
+            $validatedData = $request->validate([
+                'title' => 'required',
+                'genre' => 'required',
+                'slug' => 'required',
+                'cover' => 'nullable | image | max:500',
+            ]);
+            $cover = Storage::put('collection_cover_imgs', $request->cover);
+            $validatedData['cover'] = $cover;
+            $collection->update($validatedData);
+        }else{
+            $request['slug'] = Str::slug($request->title);
+            $validatedData = $request->validate([
+                'title' => 'required',
+                'genre' => 'required',
+                'slug' => 'required',
+                'cover' => 'nullable | image | max:500',
+            ]);
+            $collection->update($validatedData);
+        }
 
         return redirect()->route('admin.collections.index');
     }

@@ -25,6 +25,15 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        {{-- genre --}}
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input class="form-control" type="text" name="genre" id="genre" value="{{ old('genre')}}">
+        </div>
+        @error('genre')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
         {{-- cover --}}
         <div class="form-group">
           <label for="cover">Cover</label>

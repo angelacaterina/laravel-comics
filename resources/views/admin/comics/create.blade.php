@@ -120,6 +120,19 @@
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        {{-- series --}}
+        <div class="form-group">
+            <label for="collection_id">Series</label>
+            <select class="form-control" name="collection_id" id="collection_id">
+                @foreach($collections as $collection)
+                    <option value="{{ $collection->id}}">{{ $collection->genre}}</option>
+                @endforeach
+            </select>
+        </div>
+        @error('collection_id')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection

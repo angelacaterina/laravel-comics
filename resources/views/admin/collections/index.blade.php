@@ -8,8 +8,9 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
+                <th>Genre</th>
                 <th>Slug</th>
-                <th>Cover</th>
+                {{-- <th>Cover</th> --}}
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,8 +19,9 @@
             <tr>
                 <td>{{$value->id}}</td>
                 <td>{{$value->title}}</td>
+                <td>{{$value->genre}}</td>
                 <td>{{$value->slug}}</td>
-                <td>{{$value->cover}}</td>
+                {{-- <td>{{$value->cover}}</td> --}}
                 <td>
                     <a href="{{ route('admin.collections.show', ['collection'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
                     <a href="{{ route('admin.collections.edit', ['collection'=>$value->slug] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>

@@ -18,6 +18,7 @@
                 <th>Trim size</th>
                 <th>Page count</th>
                 <th>Rated</th>
+                <th>Series</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -37,6 +38,7 @@
                 <td>{{$value->trim_size}}</td>
                 <td>{{$value->page_count}}</td>
                 <td>{{$value->rated}}</td>
+                <td>{{$value->collection ? $value->collection['genre'] : 'N/A'}}</td>
                 <td>
                     <a href="{{ route('admin.comics.show', ['comic'=>$value->slug] )}}" class="btn btn-primary"><i class="far fa-eye fa-xs fa-fw"></i></a>
                     <a href="{{ route('admin.comics.edit', ['comic'=>$value->slug] )}}" class="btn btn-warning"><i class="fas fa-edit fa-xs fa-fw"></i></a>

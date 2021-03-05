@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Comics;
+use App\Collection;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -28,7 +30,8 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        $collections = Collection::all();
+        return view('admin.comics.create', compact('collections'));
     }
 
     /**
@@ -39,6 +42,10 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
+        if(!$request->hasFile('cover')){
+            return redirect()->route('admin.comics.create')->with('success', 'Devi inserire la cover');
+        }
+
         $request['slug'] = Str::slug($request->title);
 
         $validatedData = $request->validate([
@@ -54,6 +61,7 @@ class ComicsController extends Controller
             'trim_size'=>'required',
             'page_count'=>'required',
             'rated'=>'required',
+            'collection_id'=>'required',
         ]);
 
         $cover = Storage::put('cover_imgs', $request->cover);
@@ -86,7 +94,8 @@ class ComicsController extends Controller
      */
     public function edit(Comics $comic)
     {
-        return view('admin.comics.edit', compact('comic'));
+        $collections = Collection::all();
+        return view('admin.comics.edit', compact('comic', 'collections'));
     }
 
     /**
@@ -98,12 +107,11 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
-        Storage::delete($comic->cover);
-        Storage::delete($comic->jumbotron);
-        
-        $request['slug'] = Str::slug($request->title);
-        
-        $validatedData = $request->validate([
+        if($request->hasFile('cover')){
+            Storage::delete($comic->cover);
+            Storage::delete($comic->jumbotron);
+            $request['slug'] = Str::slug($request->title);
+            $validatedData = $request->validate([
             'title' => 'required',
             'slug' => 'required',
             'description' => 'required',
@@ -116,15 +124,32 @@ class ComicsController extends Controller
             'trim_size'=>'required',
             'page_count'=>'required',
             'rated'=>'required',
-        ]);
-        
-        $cover = Storage::put('cover_imgs', $request->cover);
-        $validatedData['cover'] = $cover;
-
-        $jumbotron = Storage::put('jumbotron_imgs', $request->jumbotron);
-        $validatedData['jumbotron'] = $jumbotron;
-      
-        $comic->update($validatedData);
+            'collection_id'=>'required',
+            ]);
+            $cover = Storage::put('cover_imgs', $request->cover);
+            $validatedData['cover'] = $cover;
+            $jumbotron = Storage::put('jumbotron_imgs', $request->jumbotron);
+            $validatedData['jumbotron'] = $jumbotron;
+            $comic->update($validatedData);
+        }else{
+            $request['slug'] = Str::slug($request->title);
+            $validatedData = $request->validate([
+                'title' => 'required',
+                'slug' => 'required',
+                'description' => 'required',
+                'cover' => 'nullable | image | max:500',
+                'jumbotron' => 'nullable | image | max:1000',
+                'available' => 'required',
+                'US_price'=>'required',
+                'on_sale_date'=>'required',
+                'volume_issue'=>'required',
+                'trim_size'=>'required',
+                'page_count'=>'required',
+                'rated'=>'required',
+                'collection_id'=>'required',
+            ]);
+            $comic->update($validatedData);
+        }
 
         return redirect()->route('admin.comics.index');
     }

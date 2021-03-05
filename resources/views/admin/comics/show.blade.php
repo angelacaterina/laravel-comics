@@ -17,5 +17,6 @@
     <p>Trim size: {{$comic->trim_size}}</p>
     <p>Page count: {{$comic->page_count}}</p>
     <p>Rated: {{$comic->rated}}</p>
+    <p>Series: {{$comic->collection ? $comic->collection->genre : 'N/A'}}</p>
 
 @endsection
