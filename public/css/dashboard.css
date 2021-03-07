@@ -10960,8 +10960,148 @@ body {
   overflow-x: hidden;
 }
 
+[class*=col-] {
+  padding: 0;
+}
+
 div.dashboard {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+div.dashboard div.dashboard_row {
+  display: flex;
+}
+
+div.dashboard div.dashboard_row div.dashboard_list {
+  padding: 24px 20px;
+  padding-bottom: 100px;
+  background: #2B313E;
+}
+
+div.dashboard div.dashboard_row div.dashboard_list ul li {
+  padding: 10px;
+  list-style: none;
+}
+
+div.dashboard div.dashboard_row div.dashboard_list ul li a {
+  color: #616774;
+  text-decoration: none;
+}
+
+div.dashboard div.dashboard_row div.dashboard_list ul li.active,
+div.dashboard div.dashboard_row div.dashboard_list ul li:hover {
+  background: #262A36;
+}
+
+div.dashboard div.dashboard_row div.dashboard_list ul li.active a,
+div.dashboard div.dashboard_row div.dashboard_list ul li:hover a {
+  color: white;
+}
+
+div.dashboard div.dashboard_row main#main_content {
+  padding: 24px 20px;
+  padding-bottom: 100px;
+  background: #F7F7F9;
+  width: 100%;
+  height: 100%;
+}
+
+div.dashboard div.dashboard_row main#main_content .card_dashboard {
+  width: 100%;
+  height: 87vh;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin {
+  margin-top: 10px;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th {
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th .actions_th {
+  width: 160px;
+  padding: 0 10px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th .title_th {
+  width: calc(100% - 160px - 60px - 400px);
+  padding: 0 10px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th .series_th {
+  width: 400px;
+  padding: 0 10px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th .status_th {
+  width: 60px;
+  text-align: center;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table_th .cover_th {
+  width: 60px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table {
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px solid #ffffff;
+  align-items: center;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table:not(:last-child) {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .actions {
+  width: 160px;
+  padding: 0 10px;
+  border-right: 2px solid #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .title {
+  width: calc(100% - 160px - 60px - 400px);
+  padding: 0 10px;
+  font-weight: bold;
+  border-right: 2px solid #e3e3e3;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .series {
+  width: 400px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .status {
+  width: 60px;
+  text-align: center;
+  border-left: 2px solid #e3e3e3;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .status.green {
+  color: green;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .status.red {
+  color: red;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .cover {
+  width: 60px;
+}
+
+div.dashboard div.dashboard_row main#main_content .table_admin .row_table .cover img {
+  width: 100%;
 }
 

@@ -1,4 +1,121 @@
 div.dashboard{
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    div.dashboard_row{
+        display: flex;
+        div.dashboard_list{
+            padding: 24px 20px;
+            padding-bottom: 100px;
+            background: #2B313E;
+            ul{
+                li{
+                    padding: 10px;
+                    list-style: none;
+                    a{
+                        color: #616774;
+                        text-decoration: none;
+                        
+                    }
+                    &.active,
+                    &:hover{
+                        background: #262A36;
+                        a{
+                            color:white;
+                        }
+                    }
+                } 
+            }
+        }
+        main#main_content{
+            padding: 24px 20px;
+            padding-bottom: 100px;
+            background: #F7F7F9;
+            width: 100%;
+            height: 100%;
+            .card_dashboard{
+                width: 100%;
+                height: 87vh;
+            }
+            .table_admin{
+                margin-top: 10px;
+                padding: 0 10px;
+                background: white;
+                border: 1px solid #e3e3e3;
+                border-radius: 6px;
+                .row_table_th{
+                    display: flex;
+                    padding: 10px 0;
+                    border-top: 1px solid #ffffff;
+                    border-bottom: 1px solid #e3e3e3;
+                    .actions_th{
+                        width: 160px;
+                        padding: 0 10px;
+                    }
+                    .title_th{
+                        width: calc(100% - 160px - 60px - 400px);
+                        padding: 0 10px;
+                    }
+                    .series_th{
+                        width: 400px;
+                        padding: 0 10px;
+                    }
+                    .status_th{
+                        width: 60px;
+                        text-align: center;
+                    }
+                    .cover_th{
+                        width: 60px;
+                    }
+                }
+                .row_table{
+                    display: flex;
+                    padding: 10px 0;
+                    border-top: 1px solid #ffffff;
+                    align-items: center;
+                    &:not(:last-child){
+                        border-bottom: 1px solid #e3e3e3;
+                    }
+                    .actions{
+                        width: 160px;
+                        padding: 0 10px;
+                        border-right: 2px solid #e3e3e3;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .title{
+                        width: calc(100% - 160px - 60px - 400px);
+                        padding: 0 10px;
+                        font-weight: bold;
+                        border-right: 2px solid #e3e3e3;
+                    }
+                    .series{
+                        width: 400px;
+                        padding: 0 10px;
+                        font-weight: bold;
+                        
+                    }
+                    .status{
+                        width: 60px;
+                        text-align: center;
+                        border-left: 2px solid #e3e3e3;
+                        &.green{
+                            color: green;
+                        }
+                        &.red{
+                            color: red;
+                        }
+                    }
+                    .cover{
+                        width: 60px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
+
+  
