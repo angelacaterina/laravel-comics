@@ -1,0 +1,13 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'partialsAdmin/_common';         // Regole comuni
+@import 'partialsAdmin/_header';         // HEADER
+@import 'partialsAdmin/_main';           // MAIN
+@import 'partialsAdmin/_footer';         // FOOTER
