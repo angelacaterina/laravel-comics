@@ -115,6 +115,7 @@ div.dashboard{
             }
             .show_admin{
                 width: 90%;
+                height: 100%;
                 margin: 0 auto;
                 .card_show{
                     padding: 20px;
@@ -141,44 +142,51 @@ div.dashboard{
                             }
                         }
                     }
-                    h1{
-                        margin: 10px 0;
+                    .card_row{
                         display: flex;
-                        align-items: center;
-                        span{
-                            margin-left: 20px;
-                            font-size: 20px;
-                            &.green{
-                                color: green;
+                        padding-top: 20px;
+                        .card_text{
+                            padding-right: 20px;
+                            h1{
+                                margin: 10px 0;
+                                display: flex;
+                                align-items: center;
+                                span{
+                                    margin-left: 20px;
+                                    font-size: 20px;
+                                    &.green{
+                                        color: green;
+                                    }
+                                    &.red{
+                                        color: red;
+                                    }
+                                }
                             }
-                            &.red{
-                                color: red;
+                        }
+                        .card_info{
+                            padding: 10px 20px;
+                            border-radius: 6px;
+                            background: #F7F7F9;
+                            .info_content{
+                                display: flex;
+                                padding: 10px 0;
+                                &:not(:first-child){
+                                    border-top: 1px solid #ffffff;
+                                }
+                                &:not(:last-child){
+                                    border-bottom: 1px solid #e3e3e3;
+                                }
+                                .name_info{
+                                    width: 160px;
+                                }
                             }
                         }
                     }
-                    .card_info{
-                        padding: 10px;
-                        border-radius: 6px;
-                        background: #F7F7F9;
-                        .info_content{
-                            display: flex;
-                            padding: 10px 0;
-                            &:not(:first-child){
-                                border-top: 1px solid #ffffff;
-                            }
-                            &:not(:last-child){
-                                border-bottom: 1px solid #e3e3e3;
-                            }
-                            .name_info{
-                                width: 160px;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
     }
-    
 }
 
   

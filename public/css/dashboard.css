@@ -10964,6 +10964,13 @@ body {
   padding: 0;
 }
 
+.flex_column_center_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 div.dashboard {
   width: 100%;
   height: 100%;
@@ -11107,6 +11114,7 @@ div.dashboard div.dashboard_row main#main_content .table_admin .row_table .cover
 
 div.dashboard div.dashboard_row main#main_content .show_admin {
   width: 90%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -11141,45 +11149,54 @@ div.dashboard div.dashboard_row main#main_content .show_admin .card_show .jumbot
   display: block;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row {
+  display: flex;
+  padding-top: 20px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_text {
+  padding-right: 20px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_text h1 {
   margin: 10px 0;
   display: flex;
   align-items: center;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_text h1 span {
   margin-left: 20px;
   font-size: 20px;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span.green {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_text h1 span.green {
   color: green;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span.red {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_text h1 span.red {
   color: red;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info {
-  padding: 10px;
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_info {
+  padding: 10px 20px;
   border-radius: 6px;
   background: #F7F7F9;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_info .info_content {
   display: flex;
   padding: 10px 0;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content:not(:first-child) {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_info .info_content:not(:first-child) {
   border-top: 1px solid #ffffff;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content:not(:last-child) {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_info .info_content:not(:last-child) {
   border-bottom: 1px solid #e3e3e3;
 }
 
-div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content .name_info {
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_row .card_info .info_content .name_info {
   width: 160px;
 }
 
