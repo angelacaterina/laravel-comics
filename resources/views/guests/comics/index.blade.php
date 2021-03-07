@@ -25,6 +25,10 @@
             </div>
         </section>
 
+        <section class="series_conteiner">
+
+        </section>
+
 
         @include('layouts.guests.partials.shop')
     </main>
