@@ -11009,7 +11009,7 @@ div.dashboard div.dashboard_row main#main_content {
 
 div.dashboard div.dashboard_row main#main_content .card_dashboard {
   width: 100%;
-  height: 87vh;
+  height: 80vh;
 }
 
 div.dashboard div.dashboard_row main#main_content .table_admin {
@@ -11103,5 +11103,83 @@ div.dashboard div.dashboard_row main#main_content .table_admin .row_table .cover
 
 div.dashboard div.dashboard_row main#main_content .table_admin .row_table .cover img {
   width: 100%;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin {
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .jumbotron_img {
+  position: relative;
+  border-radius: 6px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .jumbotron_img img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .jumbotron_img .cover {
+  width: 200px;
+  border: 2px solid white;
+  border-radius: 6px;
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .jumbotron_img .cover img {
+  width: 100%;
+  display: block;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span.green {
+  color: green;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show h1 span.red {
+  color: red;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info {
+  padding: 10px;
+  border-radius: 6px;
+  background: #F7F7F9;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content {
+  display: flex;
+  padding: 10px 0;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content:not(:first-child) {
+  border-top: 1px solid #ffffff;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content:not(:last-child) {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+div.dashboard div.dashboard_row main#main_content .show_admin .card_show .card_info .info_content .name_info {
+  width: 160px;
 }
 

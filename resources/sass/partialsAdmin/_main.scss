@@ -34,7 +34,7 @@ div.dashboard{
             height: 100%;
             .card_dashboard{
                 width: 100%;
-                height: 87vh;
+                height: 80vh;
             }
             .table_admin{
                 margin-top: 10px;
@@ -109,6 +109,69 @@ div.dashboard{
                         width: 60px;
                         img{
                             width: 100%;
+                        }
+                    }
+                }
+            }
+            .show_admin{
+                width: 90%;
+                margin: 0 auto;
+                .card_show{
+                    padding: 20px;
+                    background: white;
+                    border-radius: 10px;
+                    .jumbotron_img{
+                        position: relative;
+                        border-radius: 6px;
+                        img{
+                            width: 100%;
+                            display: block;
+                            border-radius: 6px;
+                        }
+                        .cover{
+                            width: 200px;
+                            border: 2px solid white;
+                            border-radius: 6px;
+                            position: absolute;
+                            left: 2%;
+                            bottom: 2%;
+                            img{
+                                width: 100%;
+                                display: block;
+                            }
+                        }
+                    }
+                    h1{
+                        margin: 10px 0;
+                        display: flex;
+                        align-items: center;
+                        span{
+                            margin-left: 20px;
+                            font-size: 20px;
+                            &.green{
+                                color: green;
+                            }
+                            &.red{
+                                color: red;
+                            }
+                        }
+                    }
+                    .card_info{
+                        padding: 10px;
+                        border-radius: 6px;
+                        background: #F7F7F9;
+                        .info_content{
+                            display: flex;
+                            padding: 10px 0;
+                            &:not(:first-child){
+                                border-top: 1px solid #ffffff;
+                            }
+                            &:not(:last-child){
+                                border-bottom: 1px solid #e3e3e3;
+                            }
+                            .name_info{
+                                width: 160px;
+                            }
                         }
                     }
                 }
